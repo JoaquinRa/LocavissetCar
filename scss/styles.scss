@@ -1,0 +1,156 @@
+$color1: #346751;
+$color2: #C84B31;
+$color3: gray;
+
+html{
+    font-size: 62,5%;
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    background-image: url(../multimedia/holidays-1283014_1920.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+/*             Estilos Home             */
+
+header{
+    @extend %flexColumn-cetrado;
+    .header__titulo{
+        color: #161616;
+        font-weight: normal;
+        font-size: 3rem;
+        text-align: center;
+        letter-spacing: 0.5rem;
+        background-image: linear-gradient($color1, $color3);
+    }
+    .header__navbarra{
+        margin: 20px;
+    }
+    .header__contenidobarra{
+        background-color:tomato;
+    }
+}
+
+.fotosAlgunosAutos{
+    color: $color2;
+    background-color: $color3;
+    text-align: center;
+}
+
+.gridHome {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-areas:
+    "encontraElauto ubicacion"
+    "encontraElauto ubicacion"
+    "encontraElauto ubicacion"
+    "encontraElauto ubicacion"
+    "encontraElauto ubicacion";
+    .encontraElauto {
+        grid-area: encontraElauto; 
+        background-color: $color2;
+        align-self: center;
+    }
+    
+    .ubicacion { 
+        grid-area: ubicacion;
+        background-color: $color1;
+    }
+    .fotosAutos img{
+        display: inline-block;
+        margin: 0.5rem 0.5rem;
+        padding: 0rem 1rem;
+    }
+    
+    .listaAutoqNecesitas{
+        color: $color1;
+        text-align: center;
+    }
+    .formAutoqNecesitas{
+        color: #000000;
+        text-align: center;
+    }
+    
+    .ubicacionMap{
+        color: $color2;
+        text-align: center;
+        display: block;
+    }
+    .mapaUbicacion {
+        text-align: center;
+        display: inline-block;
+    }
+}
+
+.footer{
+    .listaRedes li, a{
+        display: inline-block;
+        text-decoration: none;
+        color: black;
+    }
+    ul{
+        list-style: none;
+        text-align: center;
+    }
+    i{
+        font-size: 50px;
+        padding: 10px;
+        transition: all 1s;
+    }
+    i:hover{
+        font-size: 70px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    iframe{
+        width: 400px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .gridHome {
+        display: flex;
+        flex-direction: column;
+    }
+    iframe{
+        width: 415px;
+        height: 300px;
+    }
+}
+
+/*              Nosotros              */
+
+.infonosostros{
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    color: $color2;
+    background-color: $color3;
+}
+
+/*           Contacto                  */
+
+.formContacto{
+    color: black;
+    font-size: 1.8rem;
+    text-align: center;
+}
+label{
+    background-color: $color3;
+}
+legend{ 
+    background-color: $color3;
+}
+h5{
+    background-color: $color3;
+}
