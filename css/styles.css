@@ -42,7 +42,11 @@ header .header__contenidobarra {
   grid-auto-flow: row;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
-  grid-template-areas: "encontraElauto ubicacion" "encontraElauto ubicacion" "encontraElauto ubicacion" "encontraElauto ubicacion" "encontraElauto ubicacion";
+  grid-template-areas: "encontraElauto ubicacion"
+  "encontraElauto ubicacion"
+  "encontraElauto ubicacion"
+  "encontraElauto ubicacion"
+  "encontraElauto ubicacion";
 }
 
 .gridHome .encontraElauto {
