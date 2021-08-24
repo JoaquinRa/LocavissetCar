@@ -42,11 +42,7 @@ header .header__contenidobarra {
   grid-auto-flow: row;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
-  grid-template-areas: "encontraElauto ubicacion"
-  "encontraElauto ubicacion"
-  "encontraElauto ubicacion"
-  "encontraElauto ubicacion"
-  "encontraElauto ubicacion";
+  grid-template-areas: "encontraElauto ubicacion" "encontraElauto ubicacion" "encontraElauto ubicacion" "encontraElauto ubicacion" "encontraElauto ubicacion";
 }
 
 .gridHome .encontraElauto {
@@ -87,6 +83,10 @@ header .header__contenidobarra {
   display: inline-block;
 }
 
+.carousel-item img {
+  height: 650px;
+}
+
 .footer .listaRedes li, .footer a {
   display: inline-block;
   text-decoration: none;
@@ -109,6 +109,12 @@ header .header__contenidobarra {
 }
 
 @media screen and (max-width: 768px) {
+  header .header__titulo {
+    font-size: 3rem;
+  }
+  .carousel-item img {
+    height: 500px;
+  }
   iframe {
     width: 400px;
     height: 300px;
@@ -120,8 +126,37 @@ header .header__contenidobarra {
     display: flex;
     flex-direction: column;
   }
+  .carousel-item img {
+    height: 300px;
+  }
   iframe {
     width: 415px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  header .header__titulo {
+    font-size: 2rem;
+  }
+  .carousel-item img {
+    height: 275px;
+  }
+  iframe {
+    width: 375px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  header .header__titulo {
+    font-size: 2rem;
+  }
+  .carousel-item img {
+    height: 250px;
+  }
+  iframe {
+    width: 320px;
     height: 300px;
   }
 }

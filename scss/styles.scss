@@ -16,7 +16,6 @@ body{
 /*             Estilos Home             */
 
 header{
-    @extend %flexColumn-cetrado;
     .header__titulo{
         color: #161616;
         font-weight: normal;
@@ -90,6 +89,12 @@ header{
     }
 }
 
+.carousel-item{
+    img{
+        height: 650px;
+    }
+}
+
 .footer{
     .listaRedes li, a{
         display: inline-block;
@@ -111,6 +116,14 @@ header{
 }
 
 @media screen and (max-width: 768px) {
+    header .header__titulo{
+        font-size: 3rem;
+    }
+    .carousel-item{
+        img{
+            height: 500px;
+        }
+    }    
     iframe{
         width: 400px;
         height: 300px;
@@ -122,12 +135,46 @@ header{
         display: flex;
         flex-direction: column;
     }
+    .carousel-item{
+        img{
+            height: 300px;
+        }
+    }    
     iframe{
         width: 415px;
         height: 300px;
     }
 }
 
+@media screen and (max-width: 375px){
+    header .header__titulo{
+        font-size: 2rem;
+    }
+    .carousel-item{
+        img{
+            height: 275px;
+        }
+    }    
+    iframe{
+        width: 375px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    header .header__titulo{
+        font-size: 2rem;
+    }
+    .carousel-item{
+        img{
+            height: 250px;
+        }
+    }    
+    iframe{
+        width: 320px;
+        height: 300px;
+    }
+}
 /*              Nosotros              */
 
 .infonosostros{
